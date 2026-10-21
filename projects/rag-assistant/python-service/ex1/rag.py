@@ -14,7 +14,7 @@ model    = ChatOllama(model="llama3.1:8b",base_url="http://localhost:11434",temp
 # Define the model's rules and placeholders for retrieved context and the question.
 prompt = ChatPromptTemplate.from_template("""
 Answer the question using ONLY the context below. If the context doesn't contain
-the answer, say "I don't know." Be concise and quote facts directly.
+the answer, say "I don't know." Be concise and quote facts directly....
 
 Context:
 {context}
