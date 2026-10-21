@@ -8,7 +8,7 @@ embedder = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
 db       = Chroma(persist_directory="./chroma_db", embedding_function=embedder)
 
 # 🦙 REPLACE OPENAI WITH OLLAMA
-model    = ChatOllama(model="qwen2.5-coder:3b", temperature=0)
+model    = ChatOllama(model="qwen2.5-coder:3b",base_url="http://localhost:11434",temperature=0)
 
 # ⑥ The prompt: instructions + chunks + question
 prompt = ChatPromptTemplate.from_template("""
