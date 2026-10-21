@@ -34,3 +34,17 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+
+## Run both services
+Keep FastAPI running in one terminal from src/python_service:
+    uv run uvicorn main:app --reload --port 8000
+In another terminal, run Next.js from your frontend project root:
+    npm run dev
+Open http://localhost:3000.
+Try these queries:
+- refund within 30 days
+- shipping business days
+- warranty manufacturing defects
+- quantum physics
+The first three should return matching documents. The last should return no results.
