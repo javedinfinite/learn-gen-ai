@@ -11,7 +11,7 @@ docs = [
 ]
 
 # ② split into chunks (small docs here, but production = thousands of pages)
-splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=50)
+splitter = RecursiveCharacterTextSplitter(chunk_size=100, chunk_overlap=50)
 chunks = splitter.create_documents(docs)
 
 # ③ pick an embedding model (free, runs locally, no API key)
