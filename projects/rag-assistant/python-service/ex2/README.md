@@ -1,3 +1,20 @@
+From the repository root, sync that project’s dependencies without trying to build the local package (the package layout currently causes a build error):
+
+```
+uv sync --project projects/rag-assistant/python-service --no-install-project
+```
+
+Then run Uvicorn using that project’s environment:
+
+```
+uv run --project projects/rag-assistant/python-service --no-sync \
+  uvicorn --app-dir projects/rag-assistant/python-service \
+  ex2.finance:app --reload --port 8000
+```
+
+The sync may take a while because it installs the service’s dependencies.
+
+
 Prompts to Test Each Capability
 Here is a progression of prompts to test the tool-calling behavior in your terminal:
 
