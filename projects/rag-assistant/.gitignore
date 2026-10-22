@@ -42,3 +42,6 @@ next-env.d.ts
 
 # python cache
 projects/rag-assistant/python-service/__pycache__/**.cpython-314.pyc
+
+# local Chroma vector database
+/python-service/chroma_db/
