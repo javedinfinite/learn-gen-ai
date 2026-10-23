@@ -6,6 +6,15 @@ uv sync --project projects/rag-assistant/python-service --no-install-project
 
 Then run Uvicorn using that project’s environment:
 
+Be in python service folder and run below command 
+
+```
+uv run --no-sync python -m uvicorn ex2.finance:app --reload --port 8000
+
+```
+
+If you are in root folder i.e. learn-gen-ai then run below command 
+
 ```
 uv run --project projects/rag-assistant/python-service --no-sync \
   uvicorn --app-dir projects/rag-assistant/python-service \
